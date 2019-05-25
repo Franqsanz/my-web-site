@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Franqsanz Media | Desarrollo Web">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/articulos.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/ico">
+    <title> {{ titulo }} </title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="hamburgesa">
+                <div class="linea"></div>
+                <div class="linea"></div>
+                <div class="linea"></div>
+            </div>
+            <div class="logo">
+                <a href="/" class="a_logo">Franqsanz Media</a>
+            </div>  
+            <div class="nav">
+                <ul>
+                    <li><input type="text" class="search" placeholder="Buscar"></li>
+                    <li><a href="/" class="nav_enlaces">Inicio</a></li>
+                    <li><a href="/articulos" class="nav_enlaces">Articulos</a></li>
+                    <li><a href="/contacto" class="nav_enlaces">Contacto</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="cerrarNav">
+            {{{ body }}}  
+        </div>
+        <footer>
+            <p class="redes">
+                {{!-- <i class="fa fa-facebook" title="facebook"></i> --}}
+				<a href="https://instagram.com/franqsanz" class="a_redes" target="_blank">
+                    <i class="fa fa-instagram" title="Instagram"></i>
+                </a>
+                <a href="https://twitter.com/franqsanz" class="a_redes" target="_blank">
+                    <i class="fa fa-twitter" title="Twitter"></i> 
+                </a>
+                <a href="" class="a_redes" target="_blank">
+                    <i class="fa fa-linkedin" title="Linkedin"></i>
+                </a>
+                <a href="https://github.com/Franqsanz" class="a_redes" target="_blank">
+                    <i class="fa fa-github" title="GitHub"></i>
+                </a>
+            </p>
+            <p class="infoLicense">
+                Copyright © 2019 Franco Sánchez
+            </p>
+        </footer>
+    </main>
+    <script src="/js/events.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<header>Nuevo Articulo</header>
+<form action="/articulosPrivate" method="POST">
+    <input type="hidden" name="id" value="{{estado.id}}">
+    <input type="text" name="titulo" placeholder="titulo">
+    <textarea class="cuerpo" name="cuerpo" placeholder="cuerpo"></textarea>
+    {{!-- <button class="comillas">""</button> --}}
+    <input type="file" name="img_article">
+    <input type="text" name="fuente" placeholder="fuente">
+    <br>
+    <button type="submit">Compartir</button>
+</form>
+
+<style>
+    * {padding: 0; margin: 0;}
+    body {background: rgb(228, 228, 228);}
+
+    header {
+        color: rgb(224, 224, 224);  
+        background: rgb(133, 133, 133);
+        padding: 15px; 
+        font-family: Arial;
+        font-size: 23px;
+        font-style: italic;
+    }
+
+    form {
+        width: 700px;
+        margin: 70px auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    form > * {
+        width: 96%;
+        height: 20px;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 7px;
+        border: 1px solid #34495e;
+        outline: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+    }
+
+    .cuerpo {height: 100px;}
+
+    button {
+        width: 150px; 
+        height: 40px; 
+        float: right; 
+        background: #34495e;
+        color: #fff;
+    }
+</style>

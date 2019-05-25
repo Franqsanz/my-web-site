@@ -1,0 +1,408 @@
+* {padding: 0; margin: 0;}
+
+body {
+    font-family: 'bodoni bk bt'; 
+    font-style: italic;
+}
+
+::selection {background: rgb(158, 158, 158);}
+
+main {
+    display: grid;
+    height: 100vh;
+ }
+
+main > * {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 404 */
+
+.notFound {
+    margin-top: 200px;
+    height: 80px;
+    padding: 40px;
+    text-align: center;
+    font-size: 55px;
+    background: whitesmoke;
+}
+
+.msjInfo,
+.msjInfo2 {
+    max-width: 800px;
+    text-align: center;
+    font-size: 40px;
+    padding: 40px;
+    margin: auto;
+}
+
+.msjInfo2 {
+    padding: 30px;
+    font-size: 25px;
+}
+
+header {
+    width: 100%;
+    flex-direction: row;
+    color: rgb(39, 39, 39); 
+    padding: 7px; 
+    border-bottom: 1px solid grey;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.849);
+}
+
+.logo {
+    width: 300px;
+    text-align: center;
+    font-size: 35px;
+    align-self: end;
+}
+
+.a_logo {
+    text-decoration: none;
+    color: #000;
+}
+
+.search {
+    height: 30px;
+    box-sizing: border-box;
+    padding: 1px 15px 2px 17px;
+    border: 1px solid #a1a1a1;
+    outline: none;
+    border-radius: 15px;
+    margin: 0 20px;
+    font-size: 17px;
+    font-family: 'bodoni bk bt'; 
+    font-style: italic;
+}
+
+.search:focus {border: 1px solid #34495e;}
+
+.nav { 
+    width: 77%; 
+    padding: 9px;
+    align-self: end;
+}
+
+.hamburgesa {display: none;}
+
+ul {
+    text-align: right; 
+    font-size: 22px;
+}
+
+li {
+    display: inline-block; 
+    list-style: none;
+}
+
+.nav_enlaces {
+    display: block; 
+    color: gray; 
+    padding: 0 7px;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+}
+
+.nav_enlaces:hover {
+    border-bottom: 2px solid #34495e;
+    color: #34495e;
+}
+
+.bienvenido {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.foto {
+    width: 220px;
+    height: 220px;
+    border: 3px solid #34495e;
+    margin: auto;
+    background-image: url('../images/1.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    background-position-y: -30px;
+}
+
+.saludo {
+    width: 100%;
+    font-size: 70px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.titulos {
+    width: 100%;
+    max-width: 155px; 
+    margin: auto;
+    background: #34495e;
+    text-align: center;
+    color: #fff;
+    font-size: 45px;
+    font-weight: lighter;
+}
+
+.articuloSobre {
+    width: 100%; 
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    font-family: Georgia;
+    text-align: center;
+    line-height: 1.5em;
+    font-style: italic;
+}
+
+.articuloSobre::first-letter {
+    color: #34495e; 
+    font-size: 30px;
+}
+
+.formContacto {
+    padding: 30px;
+}
+
+.formMail {
+    width: 500px;
+    margin: auto;
+}
+
+.formMail > * {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 3px auto;
+    border: 0.5px solid rgb(182, 182, 182);
+    outline: none;   
+}
+
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 150px;
+    min-height: 150px;
+    font-family: Arial; 
+    font-size: 14px;
+}
+
+.btnMail {
+    width: 25%;
+    padding: 10px;
+    background: #34495e;
+    color: #fff;
+    border: 0.5px solid #34495e;    
+    font-size: 16px;
+}
+
+/*.inputNewsletter {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 80px 10px 20px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.btnNewsletter {
+    width: 100px;
+    color: #fff;
+    background-color: #34495e;
+    border: 0.5px solid #34495e;
+    border-radius: 30px;    
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    position: relative;
+    top: -54px;
+    left: 79%;
+}*/
+
+.formMail > *:focus {
+    border: 0.5px solid #34495e;
+}
+
+footer {
+    padding: 40px; 
+    background: #34495e;
+    color: #fff;
+    text-align: center;
+    font-family: Arial;
+    font-size: 22px;
+}
+
+.redes {
+    padding: 0 0 10px 0;
+}
+
+.a_redes {
+    text-decoration: none;
+    color: #fff;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-twitter,
+.fa-linkedin,
+.fa-github {
+	width: 20px;
+    padding: 10px;
+}
+
+.infoLicense {
+    font-size: 16px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    
+    /* 404 */
+    .notFound {
+        height: 35px;
+        font-size: 25px;
+    }
+    
+    .msjInfo,
+    .msjInfo2 {
+        font-size: 25px;
+    }
+    
+    .msjInfo2 {
+        font-size: 20px;
+    }
+    /* fin de 404 */
+    
+    .logo {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .hamburgesa {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: fixed;
+        top: 7px;
+        padding: 8px;  
+    }
+    
+    .linea {
+        width: 20px;
+        height: 3px;
+        background: gray;
+        margin: 3px 0;
+    }
+    
+    .search {
+        width: 200px;
+        position: absolute;
+        left: -20px;
+        top: -40px;
+    }
+
+    .nav {
+        position: absolute;
+        width: 200px;
+        height: 100vh;
+        left: -240px;
+        top: 0;
+        padding: 10px 10px 10px 20px;
+        background: whitesmoke;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        transition: 0.4s cubic-bezier(0.4, 0, 0, 1);
+    }
+
+    ul {
+        width: 80%;
+        text-align: left; 
+        font-size: 18px;
+        position: relative;
+        top: 50px;
+        padding: 10px;
+    }
+
+    li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .nav_enlaces {
+        width: 65px;
+        padding: 0;
+    }
+
+    .foto {
+        width: 120px;
+        height: 120px;
+        background-position-y: -15px;
+    }
+
+    .saludo {
+        font-size: 55px;
+    }
+
+    .titulos {
+        max-width: 170px; 
+        font-size: 40px;
+    }
+
+    .articuloSobre {
+        width: 80%; 
+    }
+
+    .formMail {
+        width: 100%;
+        text-align: center;
+    }
+
+    .formMail > * {
+        width: 80%;
+    }
+
+    textarea {
+        max-width: 100%;
+        min-width: 80%;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo {
+        font-size: 25px;
+    }
+
+    .hamburgesa {
+        top: 4px;
+    }
+
+    .saludo {
+        font-size: 35px;
+    }
+
+    .titulos {
+        max-width: 170px; 
+        font-size: 30px;
+    }
+
+    .articuloSobre {
+        width: 80%; 
+        padding: 25px;
+    }
+
+    /* footer */
+
+    footer {
+        font-size: 18px;
+    }
+
+    .fa-facebook,
+    .fa-instagram,
+    .fa-twitter,
+    .fa-linkedin,
+    .fa-github {
+	    width: 10px;
+    }
+
+    .infoLicense {
+        font-size: 14px;
+    }
+}
