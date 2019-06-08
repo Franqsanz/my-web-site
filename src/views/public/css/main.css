@@ -106,8 +106,8 @@ li {
 }
 
 .nav_enlaces:hover {
-    border-bottom: 2px solid #34495e;
-    color: #34495e;
+    border-bottom: 2px solid rgb(252, 214, 2);
+    color: rgb(252, 214, 2);
 }
 
 .bienvenido {
@@ -118,7 +118,7 @@ li {
 .foto {
     width: 220px;
     height: 220px;
-    border: 3px solid #34495e;
+    /* border: 7px solid rgb(252, 214, 2); */
     margin: auto;
     background-image: url('../images/1.jpg');
     background-size: cover;
@@ -137,9 +137,8 @@ li {
     width: 100%;
     max-width: 155px; 
     margin: auto;
-    background: #34495e;
+    background: rgb(252, 214, 2);
     text-align: center;
-    color: #fff;
     font-size: 45px;
     font-weight: lighter;
 }
@@ -155,10 +154,10 @@ li {
     font-style: italic;
 }
 
-.articuloSobre::first-letter {
-    color: #34495e; 
+/*.articuloSobre::first-letter {
+    color: rgb(252, 214, 2); 
     font-size: 30px;
-}
+}*/
 
 .formContacto {
     padding: 30px;
@@ -190,9 +189,8 @@ textarea {
 .btnMail {
     width: 25%;
     padding: 10px;
-    background: #34495e;
-    color: #fff;
-    border: 0.5px solid #34495e;    
+    background: rgb(252, 214, 2);
+    border: 0.5px solid rgb(252, 214, 2);    
     font-size: 16px;
 }
 
@@ -219,12 +217,12 @@ textarea {
 }*/
 
 .formMail > *:focus {
-    border: 0.5px solid #34495e;
+    border: 0.5px solid rgb(252, 214, 2);
 }
 
 footer {
     padding: 40px; 
-    background: #34495e;
+    background: rgb(44, 44, 44);
     color: #fff;
     text-align: center;
     font-family: Arial;

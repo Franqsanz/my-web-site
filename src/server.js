@@ -6,6 +6,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const cookie = require('cookie-parser');
 const favicon = require('serve-favicon');
+const methodOverride = require('method-override');
 const moment = require('moment');
 
 const index = require('./routes/index');
@@ -18,20 +19,19 @@ const HOST = process.env.HOST || 'http://localhost:' + PORT;
 require('./config/conexionDB');
 require('./passport/local_auth');
 
-//setting
+// setting
 app.set('views', path.join( __dirname, 'views'));
 app.set('view engine', 'hbs');
 
-//middlewares
+// middlewares
 app.use(express.static(__dirname + '/views/public/'));
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended: false}));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride());
 app.use(favicon('src/views/public/images/favicon.ico'));
-
-// utilizar las cookies
-app.use(cookie());
-
+app.use(cookie()); // usar cookies
+ 
 // utilizar las sesiones
 app.use(session({
     secret: 'franqsanz media',
@@ -39,12 +39,13 @@ app.use(session({
     saveUninitialized: false
 }));
 
-//inicializar passport
+// inicializar passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-//routes
+// routes
 app.use('/', index);
-//app.use('/contacto', EmailCtrl.sendEmail); //email route
+require('./API/API')(app);
+
 
 app.listen(PORT, () => console.log('server on port: '+ HOST));

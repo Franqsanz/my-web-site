@@ -2,13 +2,15 @@
 {{#each articulos}}
     <section class="seccionArticle">
         <h1 class="tituloArticle">{{this.titulo}}</h1>
-        {{!-- <img src="{{this.img_article}}" class="img_article"> --}}
-        <article class="articuloCuerpo">" {{this.cuerpo}} [ ... ] "</article>
+        <div class="foto_article">
+            <img src="../upload/{{this.img_article}}" class="img_article">
+        </div>
+        <article class="articuloCuerpo">{{this.cuerpo}}</article>
         <h5 class="fuenteArticle">Fuente: 
             <a href="{{this.fuente}}" class="a_fuente" target="_blak">{{this.fuente}}</a>
         </h5>
         <div class="btnOperacion">
-            {{!-- <a href="/articulos/{{this._id}}" class="a_mas">Leer Mas</a> --}}
+            <a href="/{{this._id}}" class="a_mas">Leer Mas</a>
         </div>
     </section>
 {{/each}}
