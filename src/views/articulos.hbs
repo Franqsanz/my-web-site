@@ -1,90 +1,17 @@
-<br>
-<br>
-<br>
-<br>
-<a href="/articulosPrivate/newArticulo" class="newBtn">Nuevo Articulo</a>
-<br>
+<a href="/articulosPrivate/newArticulo" class="a_newArticulo">Nuevo Articulo</a>
 {{#each articulos}}
-    <section>
-        <h1>{{this.titulo}}</h1>
-        <article>" {{this.cuerpo}} "</article>
-        <h5>Fuente: {{this.fuente}}</h5>
+    <section class="seccionArticle">
+        <h1 class="tituloArticle">{{this.titulo}}</h1>
+        <div class="foto_article">
+            <img src="../upload/{{this.img_article}}" class="img_article">
+        </div>
+        <article class="articuloCuerpo">{{this.cuerpo}}</article>
+        <h5 class="fuenteArticle">Fuente: 
+            <a href="{{this.fuente}}" class="a_fuente" target="_blak">{{this.fuente}}</a>
+        </h5>
         <div class="btnOperacion">
-            <a href="/articulosPrivate/editar/{{this._id}}">Editar</a>
-            <a href="/articulosPrivate/eliminar/{{this._id}}">Borrar</a>
+            <a href="/articulosPrivate/editar/{{this._id}}" class="a_mas">Editar</a>
+            <a href="/articulosPrivate/eliminar/{{this._id}}" class="a_mas">Borrar</a>
         </div>
     </section>
 {{/each}}
-
-<style>
-    *{padding: 0; margin: 0;}
-    body {background: whitesmoke;}
-
-    header {
-        color: rgb(224, 224, 224);  
-        background: rgb(133, 133, 133);
-        padding: 15px; 
-        font-family: Arial;
-        font-size: 23px;
-        font-style: italic;
-    }
-
-    section {
-        width: 65%;
-        margin: 10px auto;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        background: white;
-        box-shadow: 0 1px 4px gray;
-    }
-
-    h1, h5 {font-weight: lighter;}
-
-    h1 {
-        font-size: 40px;
-        padding: 22px;
-        font-family: Georgia;
-        font-style: italic;
-        color: #34495e;
-    }
-
-    article {
-        padding: 25px; 
-        font-size: 16px; 
-        line-height: 1.5em;
-        color: #34495e;
-    }
-
-    h5 {
-        font-size: 17px;
-        padding: 18px;
-        font-family: Georgia;
-        color: rgb(51, 51, 51);
-        font-style: italic;
-    }
-
-    .btnOperacion {
-        text-align: right;
-        padding: 7px;
-        margin-top: 8px;
-        font-size: 17px;
-        background: rgb(90, 90, 90);
-    }
-
-    a {
-        text-decoration: none; 
-        color: rgb(224, 224, 224); 
-        padding: 5px;
-    }
-
-    .newBtn {
-        display: block; 
-        width: 120px; 
-        padding: 10px;
-        border-radius: 7px;
-        background: #34495e;
-        color: #fff;
-        text-align: center;
-        margin: 15px auto;
-    }
-</style>

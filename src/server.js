@@ -1,20 +1,21 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const passport = require('passport');
+//const passport = require('passport');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const cookie = require('cookie-parser');
 const favicon = require('serve-favicon');
 const methodOverride = require('method-override');
 const moment = require('moment');
+// const gridfs = require('gridfs-stream');
+const formidable = require('express-formidable');
 
 const index = require('./routes/index');
-const EmailCtrl = require('./mail/mailCtrl');
 const app = express();
 
 const PORT = process.env.PORT || 8888;
-const HOST = process.env.HOST || 'http://localhost:' + PORT;
+const HOST = 'http://localhost:' + PORT;
 
 require('./config/conexionDB');
 require('./passport/local_auth');
@@ -29,23 +30,23 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride());
+// app.use(formidable.parse({keepExtensions: true}));
 app.use(favicon('src/views/public/images/favicon.ico'));
 app.use(cookie()); // usar cookies
  
 // utilizar las sesiones
-app.use(session({
+/*app.use(session({
     secret: 'franqsanz media',
     resave: false,
     saveUninitialized: false
-}));
+}));*/
 
 // inicializar passport
-app.use(passport.initialize());
-app.use(passport.session());
+/*app.use(passport.initialize());
+app.use(passport.session());*/
 
 // routes
 app.use('/', index);
 require('./API/API')(app);
 
-
-app.listen(PORT, () => console.log('server on port: '+ HOST));
+app.listen(PORT, () => console.log('server on port: ' + HOST));

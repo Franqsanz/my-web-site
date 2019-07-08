@@ -14,19 +14,4 @@ let transport = nodemailer.createTransport({
     }
 });
 
-// let helper =  {
-//     from: '"franqsanz"',
-//     to: 'francogenta8@gmail.com',
-//     subject: 'hola gmail',
-//     text: 'wow nodemailer'
-// };
-
-// transport.sendMail(helper, (err, info) => {
-//     if (err) {
-//         return console.log(err);
-//     }
-//     console.log('mensaje enviado');
-//     console.log(info);
-// });
-
 module.exports = transport;

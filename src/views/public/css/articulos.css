@@ -8,36 +8,31 @@
 .seccionArticle {
     width: 70%;
     margin: 20px auto;
-    font-family: Arial;
-    font-size: 20px;
+    font-style: normal;
     box-shadow: 0 1px 4px gray;
 }
 
 .tituloArticle, .fuenteArticle {font-weight: lighter;}
 
 .tituloArticle {
-    font-size: 40px;
+    font-size: 50px;
     padding: 22px;
-    font-family: Georgia;
-    font-style: italic;
-    color: #34495e;
+    font-style: italic; 
 }
 
 .fuenteArticle {
-    font-size: 17px;
+    font-size: 24px;
     padding: 18px;
-    font-family: Georgia;
     color: rgb(51, 51, 51);
-    font-style: italic;
+    font-style: normal;
 }
 
 .articuloCuerpo {
     width: 90%;
     padding: 20px;
     margin: auto; 
-    font-size: 16px; 
+    font-size: 20px; 
     line-height: 1.5em;
-    color: #34495e;
 }
 
 .foto_article {
@@ -70,10 +65,34 @@
     padding: 5px;
 }
 
+.a_newArticulo {
+    width: 200px;
+    margin: 80px auto;
+    text-align: center;
+    background: rgb(252, 214, 2);
+    padding: 7px;
+    border-radius: 7px;
+    font-size: 30px;
+    color: #000;
+    text-decoration: none;
+    outline: none;
+}
+
 /* responsive */
 @media (max-width: 900px) {
     .titulo {
         font-size: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .foto_article {
+        width: 70%;
+        height: 100%;
+    }
+    
+    .img_article {
+        width: 100%;
     }
 }
 
@@ -85,7 +104,7 @@
     .seccionArticle {
         width: 85%;
     }
-
+    
     .tituloArticle {
         font-size: 30px;
     }  

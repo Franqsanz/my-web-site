@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
-const URL = 'mongodb://localhost/Usuarios'
+const DB = process.env.MONGODB || 'mongodb://localhost/Usuarios';
+
 // conexion a la DB
-mongoose.connect(URL, {useNewUrlParser: true}).then(() => console.log('Connected to Database'));
+mongoose.connect(DB, {useNewUrlParser: true}).then(() => console.log('Data Base Conect'));

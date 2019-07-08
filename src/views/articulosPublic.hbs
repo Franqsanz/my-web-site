@@ -1,4 +1,15 @@
-<h3 class="titulo">ARTICULOS</h3>
+{{#if mensajeError }}
+    <h3 class="titulo">UPS!!</h3>
+    <h3 class="errorSearch">{{mensajeError}}</h3>
+    <h3 class="titulos">Enlaces</h3>
+    <a href="/" class="a_menuError">Inicio</a>
+    <a href="/articulos" class="a_menuError">Otros Articulos que te pueden interezar</a>
+    <a href="/contacto" class="a_menuError">Contacta Conmigo</a>
+{{else}}
+    <h3 class="titulo">DEFINICIONES</h3>
+    <h3 class="errorSearch">{{mensajeOk}}</h3>
+{{/if}}
+
 {{#each articulos}}
     <section class="seccionArticle">
         <h1 class="tituloArticle">{{this.titulo}}</h1>
@@ -10,7 +21,7 @@
             <a href="{{this.fuente}}" class="a_fuente" target="_blak">{{this.fuente}}</a>
         </h5>
         <div class="btnOperacion">
-            <a href="/{{this._id}}" class="a_mas">Leer Mas</a>
+            {{!-- <a href="/articulos/{{this.titulo}}" class="a_mas">Leer Mas</a> --}}
         </div>
     </section>
 {{/each}}

@@ -3,6 +3,8 @@
     <input type="hidden" name="id" value="{{articulos.id}}">
     <input type="text" name="titulo" placeholder="titulo" value="{{articulos.titulo}}">
     <input type="text" name="cuerpo" placeholder="cuerpo" value="{{articulos.cuerpo}}">
+    <input type="file" name="img_article" value="{{articulos.img_article}}">
+    <img src="/upload/{{articulos.img_article}}">
     <input type="text" name="fuente" placeholder="fuente" value="{{articulos.fuente}}">
     <br><br>
     <button type="submit">Actualizar</button>
@@ -38,6 +40,10 @@
         outline: none;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 18px;
+    }
+
+    img {
+        height: auto;
     }
 
     button {

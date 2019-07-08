@@ -1,18 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-const formidable = require('formidable');
-const passport = require('passport');
-const fs = require('fs');
-const fetch = require('node-fetch');
+const formidable = require('express-formidable');
+//const fs = require('fs');
 
 const articulos = require('../model/articulos');
 const email = require('../mail/mailCtrl');
-const newsletter = require('../model/mailNewsletter');
 
 // router
 router.get('/', (req, res) => {
-    res.render('index', {titulo: 'FranqsanzMedia'})
+    res.cookie('inicio', req.ip)
+    res.render('index', {titulo: 'FranqsanzMedia'});
 });
 
 // subir archivos
@@ -31,27 +29,51 @@ router.post('/subido', (req, res) => {
 router.get('/articulosPrivate/newArticulo', (req, res) => {
     res.render('newArticulo', { titulo: 'Nuevo Articulo | FranqsanzMedia' });
 });
-router.get('/articulos', (req, res) => {
-    articulos.find((err, articulos) => {
-        // console.log(articulos);
-        res.render('articulosPublic', { titulo: 'Articulos | FranqsanzMedia', articulos: articulos });
-    }).sort({ _id: -1 });
-})
+router.get('/definiciones', (req, res) => {
+    let mensajeError = '';
+    let mensajeOk = '';
+    if (req.query.search) {
+        //console.log(req.query.search)
+        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+
+        articulos.find({titulo: regex}, (err, articulos) => {
+            //console.log(articulos);
+            if (articulos.length < 1) {
+                mensajeError = `No se encontro resultado sobre: ${req.query.search}`;
+            } else {
+                mensajeOk = `Resultados de la búsqueda de: ${req.query.search}`;
+            }
+            res.render('articulosPublic', { titulo: 'Articulos | FranqsanzMedia', articulos: articulos, mensajeError: mensajeError, mensajeOk: mensajeOk, titulo: `Has Buscado ${req.query.search}` });
+        }).sort({ _id: -1 });  
+    } else {
+        articulos.find({}, (err, articulos) => {
+            //console.log(articulos);
+            res.render('articulosPublic', { titulo: 'Articulos | FranqsanzMedia', articulos: articulos });
+        }).sort({ _id: -1 }); 
+    }
+    res.cookie('busqueda ', req.query.search, {expires: new Date(Date.now() + 100000)})
+});
+
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
+
 // leer más
-/*router.get('/:id', (req, res) => {
-    let tituloArticulos = req.params.id;
+/*router.get('/articulos/:titulo', (req, res) => {
+    let tituloArticulos = req.params.titulo;
     
-    articulos.findOne({ _id: tituloArticulos }, (err, articulos) => {
+    articulos.findOne({ titulo: tituloArticulos }, (err, articulos) => {
         //console.log(articulos);
         if (err) throw err;
-        res.render('leermas', { titulo: 'leer mas', articulos: articulos });
+        res.render('post', { titulo: req.params.titulo, articulos: articulos });
     });
 });*/
 // fin leer más
+
 router.get('/articulosPrivate', (req, res) => {
     articulos.find((err, articulos) => {
         // console.log(estado);
-        res.render('articulos', { titulo: 'Articulos | FranqsanzMedia', articulos: articulos });
+        res.render('articulos', { titulo: 'ArticulosPrivate | FranqsanzMedia', articulos: articulos });
     }).sort({_id: -1});
 });
 router.get('/articulosPrivate/editar/:id', (req, res) => {
@@ -94,13 +116,10 @@ router.post('/articulosPrivate', (req, res) => {
 
 //contacto
 router.get('/contacto', (req, res) => {
+    res.cookie('contacto', req.body, {expires: new Date(Date.now() + 100000)})
     res.render('contacto', { titulo : 'Contacto | FranqsanzMedia' });
 });
-// router.post('/contacto', (req, res) => {
-//     res.render('contacto', { data: req.body });
-// });
 router.post('/contacto', (req, res) => {
-    console.log(req.body);
     let helper = {
         from: req.body.email,
         to: 'francogenta8@gmail.com',
@@ -110,28 +129,30 @@ router.post('/contacto', (req, res) => {
                 <p>Nombre: ${req.body.nombre}</p>
                 <p>E-mail: ${req.body.email}</p>
                 <p>Asunto: ${req.body.asunto}</p>
-                <p>Mensaje: ${req.body.msj}</p>
+                <h3>Mensaje: ${req.body.msj}</h3>
             </div>
         `
     }
     email.sendMail(helper, (err, info) => {
+        let errorMail = 'No se a podido enviar el mail, por favor vuelvalo a intentar.';
         if (err) {
+            res.render('contacto-ok', { titulo: 'Error al enviar el mail', errorMail: errorMail });
             return console.log(err);
         }
-        console.log(info);
+        //console.log(info);
+        let bienMail = `Gracias "${req.body.nombre}" por tu contacto, tu correo se a enviado correctamente.`;
+        res.render('contacto-ok', { titulo: 'Correo Enviado', bienMail: bienMail });
     });
-    res.send('enviado')
-});
-router.get('/newsletter', (req, res) => {
-    res.send('hola newsletter');
+    /*let bienMail = `Gracias "${req.body.nombre}" por tu contacto, tu correo se a enviado correctamente.`;
+    res.render('contacto-ok', { titulo: 'Correo Enviado', bienMail: bienMail });*/
 });
 
 // 404
-router.get('/error', (req, res) => {
-    res.render('error', { titulo: 'Error' });
+router.get('/404', (req, res) => {
+    res.render('404', { titulo: 'Error' });
 });
 router.all('*', (req, res) => {
-   res.redirect('/error');
+   res.redirect('/404');
 });
 
 module.exports = router;
