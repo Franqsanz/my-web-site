@@ -9,7 +9,8 @@
     width: 70%;
     margin: 20px auto;
     font-style: normal;
-    box-shadow: 0 1px 4px gray;
+    box-shadow: 0 1px 4px rgb(151, 151, 151);
+    border: 3px solid rgb(194, 194, 194);
 }
 
 .tituloArticle, .fuenteArticle {font-weight: lighter;}

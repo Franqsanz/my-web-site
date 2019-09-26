@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Franqsanz Media | Desarrollo Web">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/articulos.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="icon" href="/images/favicon.ico" type="image/ico">
+    <meta name="description" content="Apasionado por el Desarrollo y el Diseño. Desarrollador Web Full Stack">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/articulos.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    {{!-- <link rel="icon" href="../images/favicon.ico" type="image/ico"> --}}
     <title> {{ titulo }} </title>
 </head>
 <body>
     <main>
         <header>
+            {{!-- simbolo de menu mobile --}}
             <div class="hamburgesa">
                 <div class="linea"></div>
                 <div class="linea"></div>
                 <div class="linea"></div>
             </div>
             <div class="logo">
-                <a href="/" class="a_logo">Franqsanz Media</a>
+                <a href="/" class="a_logo">Franqsanz Dev</a>
             </div>  
             <div class="nav">
                 <ul>
                     <li class="X">X</li>
                     <li class="li_search">
-                        <form action="/articulos" method="GET">
-                            <input type="text" name="search" class="search" placeholder="Buscar Articulos..." required>
+                        <form action="/definiciones" method="GET">
+                            <input type="text" name="search" class="search" placeholder="Buscar Definiciones..." required>
                         </form>
                     </li>
                     <li><a href="/" class="nav_enlaces">Inicio</a></li>
@@ -56,10 +57,10 @@
                 </a>
             </p>
             <p class="infoLicense">
-                Copyright © 2019 Franco Sánchez
+                Copyright © 2019 Franco Andrés Sánchez
             </p>
         </footer>
     </main>
-    <script src="/js/events.js"></script>
+    <script src="../js/events.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
-<a href="/articulosPrivate/newArticulo" class="a_newArticulo">Nuevo Articulo</a>
-{{#each articulos}}
+<a href="/definiciones-private/newDefiniciones" class="a_newArticulo">Nueva Definicion</a>
+{{#each definiciones}}
     <section class="seccionArticle">
         <h1 class="tituloArticle">{{this.titulo}}</h1>
         <div class="foto_article">
@@ -10,8 +10,8 @@
             <a href="{{this.fuente}}" class="a_fuente" target="_blak">{{this.fuente}}</a>
         </h5>
         <div class="btnOperacion">
-            <a href="/articulosPrivate/editar/{{this._id}}" class="a_mas">Editar</a>
-            <a href="/articulosPrivate/eliminar/{{this._id}}" class="a_mas">Borrar</a>
+            <a href="/definiciones-private/editar/{{this._id}}" class="a_mas">Editar</a>
+            <a href="/definiciones-private/eliminar/{{this._id}}" class="a_mas">Borrar</a>
         </div>
     </section>
 {{/each}}

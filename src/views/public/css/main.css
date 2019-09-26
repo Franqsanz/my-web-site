@@ -150,6 +150,12 @@ li {
     text-align: center;
 }
 
+.sobreMi {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 3px solid rgb(252, 214, 2);
+}
+
 .titulos {
     width: 100%;
     max-width: 155px; 
@@ -171,11 +177,63 @@ li {
     font-size: 20px;
 }
 
-/*.articuloSobre::first-letter {
-    color: rgb(252, 214, 2); 
-    font-size: 30px;
-}*/
+/* sobre mi */
+.imgSobreMi {
+    width: 700px;
+    margin: 35px auto;
+}
 
+.miFoto {
+    width: 100%;
+    border: 3px solid rgb(252, 214, 2);
+    box-shadow: 0 0 5px gray;
+}
+
+.tituloSobreMi {
+    font-size: 37px;
+    font-style: normal;
+    color: rgb(252, 214, 2);
+}
+
+.infoEstudiosSection, .articleSobreMi {
+    width: 850px;
+    margin: 10px auto;
+}
+
+/* cajas */
+.sectionCajas {
+    display: flex;
+    width: 700px;
+    margin: auto;
+    padding: 10px;
+}
+
+.cajas {
+    width: 500px;
+    margin: 10px;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.tituloEstudios {
+    font-size: 28px;
+    color: rgb(252, 214, 2);
+    font-style: normal;
+}
+
+.a_estudios {
+    text-decoration: none;
+    color: rgb(252, 214, 2);
+}
+
+.infoEstudios {
+    font-size: 20px;
+    padding: 20px 0;
+    line-height: 1.7em;
+}
+
+/* formularios */
 .formContacto {
     padding: 30px;
 }
@@ -211,28 +269,6 @@ textarea {
     border: 0.5px solid rgb(252, 214, 2);    
     font-size: 16px;
 }
-
-/*.inputNewsletter {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 80px 10px 20px;
-    height: 50px;
-    border-radius: 30px;
-}
-
-.btnNewsletter {
-    width: 100px;
-    color: #fff;
-    background-color: #34495e;
-    border: 0.5px solid #34495e;
-    border-radius: 30px;    
-    letter-spacing: 0.1em;
-    text-align: center;
-
-    position: relative;
-    top: -54px;
-    left: 79%;
-}*/
 
 .formMail > *:focus {
     border: 0.5px solid rgb(252, 214, 2);
@@ -397,6 +433,25 @@ footer {
         max-width: 100%;
         min-width: 80%;
     }
+
+    /* sobre mi */
+    .imgSobreMi {
+        width: 500px;
+    }
+    
+    .infoEstudiosSection, .articleSobreMi{
+        width: 500px;
+    }
+
+    /* cajas */
+    .sectionCajas {
+        width: 450px;
+        flex-direction: column;
+    }
+    
+    .cajas {
+        width: 400px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -442,5 +497,29 @@ footer {
 
     .infoLicense {
         font-size: 14px;
+    }
+
+    /* sobre mi */
+    .imgSobreMi {
+        width: 200px;
+    }
+
+    .tituloSobreMi, .tituloEstudios {
+        font-size: 26px;
+    }
+    
+    .infoEstudiosSection, .articleSobreMi{
+        width: 200px;
+        font-size: 17px;
+    }
+
+    /* cajas */
+    .sectionCajas {
+        width: 180px;
+    }
+    
+    .cajas {
+        width: 130px;
+        font-size: 17px;
     }
 }

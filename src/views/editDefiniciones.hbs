@@ -1,11 +1,11 @@
 <header>Editar Articulo</header>
-<form action="/articulosPrivate" method="POST">
-    <input type="hidden" name="id" value="{{articulos.id}}">
-    <input type="text" name="titulo" placeholder="titulo" value="{{articulos.titulo}}">
-    <input type="text" name="cuerpo" placeholder="cuerpo" value="{{articulos.cuerpo}}">
-    <input type="file" name="img_article" value="{{articulos.img_article}}">
-    <img src="/upload/{{articulos.img_article}}">
-    <input type="text" name="fuente" placeholder="fuente" value="{{articulos.fuente}}">
+<form action="/" method="POST">
+    <input type="hidden" name="id" value="{{definiciones.id}}">
+    <input type="text" name="titulo" placeholder="titulo" value="{{definiciones.titulo}}">
+    <input type="text" name="cuerpo" placeholder="cuerpo" value="{{definiciones.cuerpo}}">
+    <input type="file" name="img_article" value="{{definiciones.img_article}}">
+    <img src="/upload/{{definiciones.img_article}}">
+    <input type="text" name="fuente" placeholder="fuente" value="{{definiciones.fuente}}">
     <br><br>
     <button type="submit">Actualizar</button>
 </form>

@@ -1,34 +1,28 @@
 {
-  "name": "Franqsanz_Media",
+  "name": "Franqsanz_Dev",
   "version": "0.0.1",
   "description": "Desarrollando mi primer WebApp con Node.js y MongoDB",
   "main": "server.js",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
-    "debug": "^4.1.1",
+    "dotenv": "^8.1.0",
     "express": "^4.16.4",
     "express-formidable": "^1.2.0",
-    "express-session": "^1.15.6",
-    "gridfs-stream": "^1.1.1",
-    "hbs": "^4.0.3",
-    "method-override": "^3.0.0",
-    "moment": "^2.24.0",
+    "express-handlebars": "^3.1.0",
+    "helmet": "^3.20.0",
     "mongoose": "^5.4.18",
     "morgan": "^1.9.1",
-    "node-fetch": "^2.3.0",
     "nodemailer": "^6.1.1",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
+    "@types/express-formidable": "^1.0.3",
     "nodemon": "^1.18.10"
   },
   "scripts": {
     "dev": "nodemon src/server.js"
   },
-  "author": "Franco Sánchez",
-  "license": "ISC"
+  "author": "Franco Andrés Sánchez",
+  "license": "MIT"
 }

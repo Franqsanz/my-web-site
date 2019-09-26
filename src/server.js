@@ -1,52 +1,61 @@
+'use strict'
+
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-//const passport = require('passport');
-const session = require('express-session');
 const bodyParser = require('body-parser');
 const cookie = require('cookie-parser');
 const favicon = require('serve-favicon');
-const methodOverride = require('method-override');
-const moment = require('moment');
-// const gridfs = require('gridfs-stream');
-const formidable = require('express-formidable');
+//const formidable = require('express-formidable');
+const helmet = require('helmet');
+const hbs = require('express-handlebars');
+require('dotenv').config();
 
 const index = require('./routes/index');
+const definitionsPrivate = require('./routes/definitions-private');
+const viewsStaticCtrl = require('./controllers/routerStatic');
+const config = require('./config/config');
+
 const app = express();
 
-const PORT = process.env.PORT || 8888;
-const HOST = 'http://localhost:' + PORT;
-
+const HOST = process.env.HOST_LOCAL;
 require('./config/conexionDB');
-require('./passport/local_auth');
 
 // setting
-app.set('views', path.join( __dirname, 'views'));
-app.set('view engine', 'hbs');
+app.engine('.hbs', hbs({
+    defaultLayout: 'default',
+    extname: '.hbs'
+}))
+app.set('views', path.join(__dirname, '/views/'));
+app.set('view engine', '.hbs');
 
 // middlewares
-app.use(express.static(__dirname + '/views/public/'));
+app.use(helmet({
+    contentSecurityPolicy: false,
+    hpkp: false,
+    hsts: false,
+    frameguard: true,
+    xssFilter: true  
+}));
+app.use(express.static(__dirname + '/views/public'));
 app.use(morgan('dev'));
+/*app.use(formidable({
+    encoding: 'utf-8',
+    uploadDir: __dirname + '/views/public/upload/',
+    keepExtensions: true
+}));*/
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(methodOverride());
-// app.use(formidable.parse({keepExtensions: true}));
-app.use(favicon('src/views/public/images/favicon.ico'));
+app.use(favicon(path.join(__dirname, '/views/public/images/favicon.ico')));
 app.use(cookie()); // usar cookies
- 
-// utilizar las sesiones
-/*app.use(session({
-    secret: 'franqsanz media',
-    resave: false,
-    saveUninitialized: false
-}));*/
-
-// inicializar passport
-/*app.use(passport.initialize());
-app.use(passport.session());*/
 
 // routes
 app.use('/', index);
-require('./API/API')(app);
+app.use('/definiciones-private', definitionsPrivate);
 
-app.listen(PORT, () => console.log('server on port: ' + HOST));
+// 404
+app.get('/404', viewsStaticCtrl.get404);
+app.all('*', viewsStaticCtrl.getAll);
+
+// le pasamos el puerto de escucha al servidor
+app.listen(config.Port, () => console.log(`server on port: ${HOST + config.Port}`));
