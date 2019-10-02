@@ -33,7 +33,7 @@ app.set('view engine', '.hbs');
 app.use(helmet({
     contentSecurityPolicy: false,
     hpkp: false,
-    hsts: false,
+    hsts: true,
     frameguard: true,
     xssFilter: true  
 }));

@@ -367,20 +367,15 @@ footer {
     ul {
         width: 80%;
         text-align: left; 
-        font-size: 18px;
+        font-size: 23px;
         position: relative;
         top: 60px;
         padding: 10px;
     }
 
-    li {
-        display: block;
-        margin: 5px 0;
-    }
+    li { display: block; }
 
-    .errorSearch {
-        font-size: 30px;
-    } 
+    .errorSearch { font-size: 30px; } 
 
     .X {
         display: block;
