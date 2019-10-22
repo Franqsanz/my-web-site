@@ -1,26 +1,24 @@
-<br>
-<br>
-<br>
-<br>
-<form action="/definiciones-private/newDefiniciones" method="POST" >
+<form action="/definiciones-private/newDefiniciones" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="id" value="{{estado.id}}">
     <input type="text" name="titulo" placeholder="titulo" class="input">
     <textarea class="cuerpo" name="cuerpo" placeholder="cuerpo" class="input"></textarea>
-    <input type="file" name="img_article" class="input">
+    <input type="file" name="img" class="input">
     <input type="text" name="fuente" placeholder="fuente" class="input">
     <br>
     <button type="submit">Compartir</button>
 </form>
-
-{{!-- <style>    
+{{#if msj}}
+{{ msj }}
+{{/if}}
+<style>
     form {
         width: 700px;
-        margin: 70px auto;
+        margin: 10px auto;
         padding: 20px;
         box-sizing: border-box;
     }
 
-    form > * {
+    form>* {
         width: 96%;
         height: 20px;
         padding: 10px;
@@ -32,13 +30,15 @@
         font-size: 18px;
     }
 
-    .cuerpo {height: 100px;}
+    .cuerpo {
+        height: 100px;
+    }
 
     button {
-        width: 150px; 
-        height: 40px; 
-        float: right; 
+        width: 150px;
+        height: 40px;
+        float: right;
         background: #34495e;
         color: #fff;
     }
-</style> --}}
+</style>

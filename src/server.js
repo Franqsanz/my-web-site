@@ -6,7 +6,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cookie = require('cookie-parser');
 const favicon = require('serve-favicon');
-//const formidable = require('express-formidable');
 const helmet = require('helmet');
 const hbs = require('express-handlebars');
 require('dotenv').config();
@@ -35,17 +34,12 @@ app.use(helmet({
     hpkp: false,
     hsts: true,
     frameguard: true,
-    xssFilter: true  
+    xssFilter: true
 }));
 app.use(express.static(__dirname + '/views/public'));
 app.use(morgan('dev'));
-/*app.use(formidable({
-    encoding: 'utf-8',
-    uploadDir: __dirname + '/views/public/upload/',
-    keepExtensions: true
-}));*/
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(favicon(path.join(__dirname, '/views/public/images/favicon.ico')));
 app.use(cookie()); // usar cookies
 
