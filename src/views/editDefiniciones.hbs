@@ -1,56 +1,20 @@
-<header>Editar Articulo</header>
-<form action="/" method="POST">
-    <input type="hidden" name="id" value="{{definiciones.id}}">
-    <input type="text" name="titulo" placeholder="titulo" value="{{definiciones.titulo}}">
-    <input type="text" name="cuerpo" placeholder="cuerpo" value="{{definiciones.cuerpo}}">
-    <input type="file" name="img_article" value="{{definiciones.img_article}}">
-    <img src="/upload/{{definiciones.img_article}}">
-    <input type="text" name="fuente" placeholder="fuente" value="{{definiciones.fuente}}">
-    <br><br>
-    <button type="submit">Actualizar</button>
-</form>
-
-<style>
-    * {padding: 0; margin: 0;}
-    body {background: rgb(228, 228, 228);}
-
-    header {
-        color: rgb(224, 224, 224);  
-        background: rgb(133, 133, 133);
-        padding: 15px; 
-        font-family: Arial;
-        font-size: 23px;
-        font-style: italic;
-    }
-
-    form {
-        width: 600px;
-        margin: auto;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    form > * {
-        width: 96%;
-        height: 20px;
-        padding: 10px;
-        margin: 5px;
-        border-radius: 7px;
-        border: 1px solid #34495e;
-        outline: none;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 18px;
-    }
-
-    img {
-        height: auto;
-    }
-
-    button {
-        width: 150px; 
-        height: 40px; 
-        float: right; 
-        background: #34495e;
-        color: #fff;
-    }
-</style>   
+<h3 class="titulo">
+    Editar Definicion
+    <br>
+    <span>
+        {{#if msj}}
+        {{ msj }}
+        {{/if}}
+    </span>
+</h3>
+<div class="formContacto">
+    <form action="/definiciones-private/newDefiniciones" method="POST" class="formMail" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{{definiciones.id}}">
+        <input type="text" name="titulo" placeholder="titulo" value="{{definiciones.titulo}}">
+        <input type="text" name="cuerpo" placeholder="cuerpo" value="{{definiciones.cuerpo}}">
+        <input type="file" name="img" value="{{definiciones.img}}">
+        <img src="/upload/{{definiciones.img}}">
+        <input type="text" name="fuente" placeholder="fuente" value="{{definiciones.fuente}}">
+        <input type="submit" value="Actualizar" class="btnMail">
+    </form>
+</div>

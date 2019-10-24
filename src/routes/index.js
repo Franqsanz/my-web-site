@@ -10,6 +10,7 @@ router.get('/', viewsStaticCtrl.getHome);
 router.get('/sobre-mi', viewsStaticCtrl.getSobreMi);
 //definiciones todo
 router.get('/definiciones', definitionsCtrl.getDefinitions);
+router.get('/definiciones/:id', definitionsCtrl.getDefinitionsOne);
 // contacto
 router.get('/contacto', viewsStaticCtrl.getContact);
 router.post('/contacto', viewsStaticCtrl.postContact);

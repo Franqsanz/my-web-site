@@ -42,6 +42,19 @@ function escapeRegex(text) {
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 }
 
+function getDefinitionsOne(req, res) {
+    let idDefiniciones = req.params.id;
+
+    definiciones.findOne({ _id: idDefiniciones }, (err, definicionesOne) => {
+
+        res.render('leermas',
+            {
+                definicionesOne: definicionesOne,
+                titulo: `${definicionesOne.titulo} | FranqsanzDev`
+            });
+    })
+}
+
 function getEditDefinitions(req, res) {
     let idDefiniciones = req.params.id;
 
@@ -76,7 +89,6 @@ function postDefinitionsPrivate(req, res) {
                 res.render('newDefiniciones', {
                     msj: 'No hay ninguna seleccion'
                 })
-                res.send('no hay seleccion')
             } else {
                 let newDefinicion = new definiciones({
                     titulo: req.body.titulo,
@@ -86,8 +98,25 @@ function postDefinitionsPrivate(req, res) {
                 });
 
                 newDefinicion.save(() => {
-                    res.redirect('/definiciones-private');
+                    res.redirect('/definiciones-private')
                 })
+
+                /*if (req.body._id === "") {
+                    let newDefinicion = new definiciones({
+                        titulo: req.body.titulo,
+                        cuerpo: req.body.cuerpo,
+                        img: req.file.filename,
+                        fuente: req.body.fuente
+                    });
+
+                    newDefinicion.save()
+                } else {
+                    // let update = req.body
+                    definiciones.findByIdAndUpdate(req.body._id, { $set: req.body }, (err) => {
+                        if (err) return res.status(500).send(`a habido un error ${err}`)
+                    })
+                }
+                res.redirect('/definiciones-private')*/
             }
         }
     })
@@ -105,6 +134,7 @@ module.exports = {
     getDefinitions,
     getEditDefinitions,
     getNewDefinitions,
+    getDefinitionsOne,
     getDefinitionsPrivate,
     postDefinitionsPrivate,
     getDefinitionsDelete
