@@ -13,7 +13,3 @@ cerrarNav.addEventListener('click', () => {
 X.addEventListener('click', () => {
     nav.style.left = '-240px';
 });
-
-fetch('http://localhost:8300/definiciones')
-.then(res => console.log(res))
-//.then(data => console.log(data))

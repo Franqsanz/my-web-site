@@ -1,5 +1,5 @@
 ## Franqsanz Dev 2019 (Franco Andrés Sánchez)
-![](src/views/public/images/favicon.ico)
+![](src/views/public/images/franqsanz-dev-logo.png)
 Un sitio personal que utilizare como **portafolio de CV**, y tambien para que me contacten.
 ##### Tecnologias utilizadas en este Proyecto:
 * Handlebars.js

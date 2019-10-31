@@ -1,295 +1,317 @@
-* { padding: 0; margin: 0; }
-
-body {
-    font-family: 'bodoni bk bt'; 
-    font-style: italic;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-::selection {background: rgb(158, 158, 158);}
+body {
+  font-family: 'bodoni bk bt';
+  font-style: italic;
+}
+
+.cerrarNav {
+  padding-bottom: 22rem;
+}
+
+::selection {
+  background: rgb(158, 158, 158);
+}
 
 main {
-    display: grid;
-    height: 100vh;
- }
+  display: grid;
+  min-height: 100vh;
+  position: relative;
+}
 
 main > * {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 404 */
 
 .notFound {
-    margin-top: 200px;
-    height: 80px;
-    padding: 40px;
-    text-align: center;
-    font-size: 55px;
-    background: whitesmoke;
+  margin-top: 200px;
+  height: 80px;
+  padding: 40px;
+  text-align: center;
+  font-size: 55px;
+  background: whitesmoke;
 }
 
 .msjInfo,
 .msjInfo2 {
-    max-width: 800px;
-    text-align: center;
-    font-size: 40px;
-    padding: 40px;
-    margin: auto;
+  max-width: 800px;
+  text-align: center;
+  font-size: 40px;
+  padding: 40px;
+  margin: auto;
 }
 
 .msjInfo2 {
-    padding: 30px;
-    font-size: 25px;
+  padding: 30px;
+  font-size: 25px;
 }
 
 header {
-    width: 100%;
-    flex-direction: row;
-    color: rgb(39, 39, 39); 
-    padding: 7px; 
-    border-bottom: 1px solid grey;
-    position: fixed;
-    background: rgba(255, 255, 255, 0.849);
+  width: 100%;
+  flex-direction: row;
+  color: rgb(39, 39, 39);
+  padding: 7px;
+  border-bottom: 1px solid grey;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.849);
 }
 
 .logo {
-    width: 300px;
-    text-align: center;
-    font-size: 35px;
-    align-self: end;
+  width: 300px;
+  text-align: center;
+  font-size: 35px;
+  align-self: end;
 }
 
 .a_logo {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 .search {
-    height: 30px;
-    box-sizing: border-box;
-    padding: 1px 50px 2px 10px;
-    border: 1px solid #a1a1a1;
-    outline: none;
-    border-radius: 15px;
-    margin: 0 20px;
-    font-size: 17px;
-    font-family: 'bodoni bk bt'; 
-    font-style: italic;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 1px 50px 2px 10px;
+  border: 1px solid #a1a1a1;
+  outline: none;
+  border-radius: 15px;
+  margin: 0 20px;
+  font-size: 17px;
+  font-family: 'bodoni bk bt';
+  font-style: italic;
 }
 
-.search:focus {border: 0.5px solid rgb(252, 214, 2);}
-
-.nav { 
-    width: 77%; 
-    padding: 9px;
-    align-self: end;
+.search:focus {
+  border: 0.5px solid rgb(252, 214, 2);
 }
 
-.hamburgesa {display: none;}
+.nav {
+  width: 77%;
+  padding: 9px;
+  align-self: end;
+}
+
+.hamburgesa {
+  display: none;
+}
 
 ul {
-    text-align: right; 
-    font-size: 22px;
+  text-align: right;
+  font-size: 22px;
 }
 
 li {
-    display: inline-block; 
-    list-style: none;
+  display: inline-block;
+  list-style: none;
 }
 
-.X {display: none;}
+.X {
+  display: none;
+}
 
 .nav_enlaces {
-    display: block; 
-    color: gray; 
-    padding: 0 7px;
-    border-bottom: 2px solid transparent;
-    text-decoration: none;
+  display: block;
+  color: gray;
+  padding: 0 7px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
 }
 
 .nav_enlaces:hover {
-    border-bottom: 2px solid rgb(252, 214, 2);
-    color: rgb(252, 214, 2);
+  border-bottom: 2px solid rgb(252, 214, 2);
+  color: rgb(252, 214, 2);
 }
 
 .errorSearch {
-    width: 100%;
-    text-align: center;
-    font-size: 45px;
-    padding: 0 0 20px 0;
-} 
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  padding: 0 0 20px 0;
+}
 
 .a_menuError {
-    margin: auto;
-    font-size: 24px;
-    color: #000;
-    padding: 4px;
+  margin: auto;
+  font-size: 24px;
+  color: #000;
+  padding: 4px;
 }
 
 .bienvenido {
-    width: 100%;
-    margin-top: 100px;
+  width: 100%;
+  margin-top: 100px;
 }
 
 .foto {
-    width: 220px;
-    height: 220px;
-    border: 4px solid rgb(252, 214, 2);
-    box-shadow: 0 0 5px gray;
-    margin: auto;
-    background-image: url('../images/1.jpg');
-    background-size: cover;
-    border-radius: 50%;
-    background-position: -8px -30px;
+  width: 220px;
+  height: 220px;
+  border: 4px solid rgb(252, 214, 2);
+  box-shadow: 0 0 5px gray;
+  margin: auto;
+  background-image: url('../images/1.jpg');
+  background-size: cover;
+  border-radius: 50%;
+  background-position: -8px -30px;
 }
 
 .saludo {
-    width: 100%;
-    font-size: 70px;
-    margin: 30px auto;
-    text-align: center;
+  width: 100%;
+  font-size: 70px;
+  margin: 30px auto;
+  text-align: center;
 }
 
 .sobreMi {
-    color: #000;
-    text-decoration: none;
-    border-bottom: 3px solid rgb(252, 214, 2);
+  color: #000;
+  text-decoration: none;
+  border-bottom: 3px solid rgb(252, 214, 2);
 }
 
 .titulos {
-    width: 100%;
-    max-width: 155px; 
-    margin: auto;
-    background: rgb(252, 214, 2);
-    text-align: center;
-    font-size: 45px;
-    font-weight: lighter;
+  width: 100%;
+  max-width: 155px;
+  margin: 20px auto;
+  background: rgb(252, 214, 2);
+  text-align: center;
+  font-size: 45px;
+  font-weight: lighter;
 }
 
 .articuloSobre {
-    width: 100%; 
-    max-width: 700px;
-    margin: auto;
-    padding: 30px;
-    text-align: center;
-    line-height: 1.5em;
-    font-style: normal;
-    font-size: 20px;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.5em;
+  font-style: normal;
+  font-size: 20px;
 }
 
 /* sobre mi */
 .imgSobreMi {
-    width: 400px;
-    margin: 35px auto;
+  width: 400px;
+  margin: 35px auto;
 }
 
 .miFoto {
-    width: 100%;
-    border: 3px solid rgb(252, 214, 2);
-    box-shadow: 0 0 5px gray;
+  width: 100%;
+  border: 3px solid rgb(252, 214, 2);
+  box-shadow: 0 0 5px gray;
 }
 
 .tituloSobreMi {
-    font-size: 37px;
-    font-style: normal;
-    color: rgb(252, 214, 2);
+  font-size: 37px;
+  font-style: normal;
+  color: rgb(252, 214, 2);
 }
 
-.infoEstudiosSection, .articleSobreMi {
-    width: 850px;
-    margin: 10px auto;
+.infoEstudiosSection,
+.articleSobreMi {
+  width: 850px;
+  margin: 10px auto;
 }
 
 /* cajas */
 .sectionCajas {
-    display: flex;
-    width: 700px;
-    margin: auto;
-    padding: 10px;
+  display: flex;
+  width: 700px;
+  margin: auto;
+  padding: 10px;
 }
 
 .cajas {
-    width: 500px;
-    margin: 10px;
-    text-align: center;
-    font-size: 22px;
-    padding: 10px;
+  width: 500px;
+  margin: 10px;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px;
 }
 
 .tituloEstudios {
-    font-size: 28px;
-    color: rgb(252, 214, 2);
-    font-style: normal;
+  font-size: 28px;
+  color: rgb(252, 214, 2);
+  font-style: normal;
 }
 
 .a_estudios {
-    text-decoration: none;
-    color: rgb(252, 214, 2);
+  text-decoration: none;
+  color: rgb(252, 214, 2);
 }
 
 .infoEstudios {
-    font-size: 20px;
-    padding: 20px 0;
-    line-height: 1.7em;
+  font-size: 20px;
+  padding: 20px 0;
+  line-height: 1.7em;
 }
 
 /* formularios */
 .formContacto {
-    padding: 30px;
+  padding: 30px;
 }
 
 .formMail {
-    width: 500px;
-    margin: auto;
+  width: 500px;
+  margin: auto;
 }
 
 .formMail > * {
-    width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-    margin: 3px auto;
-    border: 0.5px solid rgb(182, 182, 182);
-    outline: none;   
-    box-shadow: 0 0 4px gray;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 3px auto;
+  border: 0.5px solid rgb(182, 182, 182);
+  outline: none;
+  box-shadow: 0 0 4px gray;
 }
 
 textarea {
-    max-width: 100%;
-    min-width: 100%;
-    max-height: 150px;
-    min-height: 150px;
-    font-family: Arial; 
-    font-size: 14px;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 150px;
+  min-height: 150px;
+  font-family: Arial;
+  font-size: 14px;
 }
 
 .btnMail {
-    width: 25%;
-    padding: 10px;
-    background: rgb(252, 214, 2);
-    border: 0.5px solid rgb(252, 214, 2);    
-    font-size: 16px;
+  width: 25%;
+  padding: 10px;
+  background: rgb(252, 214, 2);
+  border: 0.5px solid rgb(252, 214, 2);
+  font-size: 16px;
 }
 
 .formMail > *:focus {
-    border: 0.5px solid rgb(252, 214, 2);
+  border: 0.5px solid #fcd602;
 }
 
 footer {
-    padding: 40px; 
-    background: rgb(44, 44, 44);
-    color: #fff;
-    text-align: center;
-    font-family: Arial;
-    font-size: 22px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15rem;
+  padding: 0 0 40px 0;
+  margin: auto;
+  background: rgb(44, 44, 44);
+  color: #fff;
+  text-align: center;
+  font-family: Arial;
+  font-size: 22px;
 }
 
 .redes {
-    padding: 0 0 10px 0;
+  padding: 50px 0 10px 0;
 }
 
 .a_redes {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 .fa-facebook,
@@ -297,224 +319,231 @@ footer {
 .fa-twitter,
 .fa-linkedin,
 .fa-github {
-	width: 20px;
-    padding: 10px;
+  width: 20px;
+  padding: 10px;
 }
 
 .infoLicense {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 /* responsive */
 @media (max-width: 900px) {
-    
-    /* 404 */
-    .notFound {
-        height: 35px;
-        font-size: 25px;
-    }
-    
-    .msjInfo,
-    .msjInfo2 {
-        font-size: 25px;
-    }
-    
-    .msjInfo2 {
-        font-size: 20px;
-    }
-    /* fin de 404 */
-    
-    .logo {
-        width: 100%;
-        font-size: 30px;
-    }
+  /* 404 */
+  .notFound {
+    height: 35px;
+    font-size: 25px;
+  }
 
-    .hamburgesa {
-        display: block;
-        width: 20px;
-        height: 20px;
-        position: fixed;
-        top: 7px;
-        padding: 8px;  
-    }
-    
-    .linea {
-        width: 20px;
-        height: 3px;
-        background: gray;
-        margin: 3px 0;
-    }
-    
-    .search {
-        width: 195px;
-        position: absolute;
-        left: -20px;
-        top: -30px;  
-    }
+  .msjInfo,
+  .msjInfo2 {
+    font-size: 25px;
+  }
 
-    .nav {
-        position: absolute;
-        width: 200px;
-        height: 100vh;
-        left: -240px;
-        top: 0;
-        padding: 10px 10px 10px 20px;
-        background: whitesmoke;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        transition: 0.4s cubic-bezier(0.4, 0, 0, 1);
-    }
+  .msjInfo2 {
+    font-size: 20px;
+  }
+  /* fin de 404 */
 
-    ul {
-        width: 80%;
-        text-align: left; 
-        font-size: 23px;
-        position: relative;
-        top: 60px;
-        padding: 10px;
-    }
+  .logo {
+    width: 100%;
+    font-size: 30px;
+  }
 
-    li { display: block; }
+  .hamburgesa {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 7px;
+    padding: 8px;
+  }
 
-    .errorSearch { font-size: 30px; } 
+  .linea {
+    width: 20px;
+    height: 3px;
+    background: gray;
+    margin: 3px 0;
+  }
 
-    .X {
-        display: block;
-        text-align: right;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 27px;
-        padding: 5px;
-        position: absolute;
-        left: 175px;
-        top: -75px;  
-        cursor: default;
-        color: rgb(80, 80, 80);
-    }
+  .search {
+    width: 195px;
+    position: absolute;
+    left: -20px;
+    top: -30px;
+  }
 
-    .nav_enlaces {
-        width: 65px;
-        padding: 0;
-    }
+  .nav {
+    position: absolute;
+    width: 200px;
+    height: 100vh;
+    left: -240px;
+    top: 0;
+    padding: 10px 10px 10px 20px;
+    background: whitesmoke;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.4s cubic-bezier(0.4, 0, 0, 1);
+  }
 
-    .foto {
-        width: 120px;
-        height: 120px;
-        background-position: -1px -15px;
-    }
+  ul {
+    width: 80%;
+    text-align: left;
+    font-size: 23px;
+    position: relative;
+    top: 60px;
+    padding: 10px;
+  }
 
-    .saludo {
-        font-size: 55px;
-    }
+  li {
+    display: block;
+  }
 
-    .titulos {
-        max-width: 170px; 
-        font-size: 40px;
-    }
+  .errorSearch {
+    font-size: 30px;
+  }
 
-    .articuloSobre {
-        width: 80%; 
-    }
+  .X {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    padding: 5px;
+    position: absolute;
+    left: 175px;
+    top: -75px;
+    cursor: default;
+    color: rgb(80, 80, 80);
+  }
 
-    .formMail {
-        width: 100%;
-        text-align: center;
-    }
+  .nav_enlaces {
+    width: 65px;
+    padding: 0;
+  }
 
-    .formMail > * {
-        width: 80%;
-    }
+  .foto {
+    width: 120px;
+    height: 120px;
+    background-position: -1px -15px;
+  }
 
-    textarea {
-        max-width: 100%;
-        min-width: 80%;
-    }
+  .saludo {
+    font-size: 55px;
+  }
 
-    /* sobre mi */
-    .imgSobreMi {
-        width: 300px;
-    }
-    
-    .infoEstudiosSection, .articleSobreMi{
-        width: 500px;
-    }
+  .titulos {
+    max-width: 170px;
+    font-size: 40px;
+  }
 
-    /* cajas */
-    .sectionCajas {
-        width: 450px;
-        flex-direction: column;
-    }
-    
-    .cajas {
-        width: 400px;
-    }
+  .articuloSobre {
+    width: 80%;
+  }
+
+  .formMail {
+    width: 100%;
+    text-align: center;
+  }
+
+  .formMail > * {
+    width: 80%;
+  }
+
+  textarea {
+    max-width: 100%;
+    min-width: 80%;
+  }
+
+  /* sobre mi */
+  .imgSobreMi {
+    width: 300px;
+  }
+
+  .infoEstudiosSection,
+  .articleSobreMi {
+    width: 500px;
+  }
+
+  /* cajas */
+  .sectionCajas {
+    width: 450px;
+    flex-direction: column;
+  }
+
+  .cajas {
+    width: 400px;
+  }
 }
 
 @media (max-width: 420px) {
-    .logo {
-        font-size: 25px;
-    }
+  .logo {
+    font-size: 25px;
+  }
 
-    .hamburgesa {
-        top: 4px;
-    }
+  .hamburgesa {
+    top: 4px;
+  }
 
-    .saludo {
-        font-size: 35px;
-    }
+  .saludo {
+    font-size: 35px;
+  }
 
-    .titulos {
-        max-width: 170px; 
-        font-size: 30px;
-    }
+  .titulos {
+    max-width: 170px;
+    font-size: 30px;
+  }
 
-    .articuloSobre {
-        width: 80%; 
-        padding: 25px;
-    }
+  .articuloSobre {
+    width: 80%;
+    padding: 25px;
+  }
 
-    .errorSearch {
-        font-size: 25px;
-    } 
+  .errorSearch {
+    font-size: 25px;
+  }
 
-    /* footer */
+  /* footer */
 
-    footer {
-        font-size: 18px;
-    }
+  footer {
+    font-size: 18px;
+    height: 12rem;
+  }
 
-    .fa-facebook,
-    .fa-instagram,
-    .fa-twitter,
-    .fa-linkedin,
-    .fa-github {
-	    width: 10px;
-    }
+  .fa-facebook,
+  .fa-instagram,
+  .fa-twitter,
+  .fa-linkedin,
+  .fa-github {
+    width: 10px;
+  }
 
-    .infoLicense {
-        font-size: 14px;
-    }
+  .infoLicense {
+    font-size: 14px;
+  }
 
-    /* sobre mi */
-    .imgSobreMi {
-        width: 200px;
-    }
+  /* sobre mi */
+  .imgSobreMi {
+    width: 200px;
+  }
 
-    .tituloSobreMi, .tituloEstudios {
-        font-size: 26px;
-    }
-    
-    .infoEstudiosSection, .articleSobreMi{
-        width: 200px;
-        font-size: 17px;
-    }
+  .tituloSobreMi,
+  .tituloEstudios {
+    font-size: 26px;
+  }
 
-    /* cajas */
-    .sectionCajas {
-        width: 180px;
-    }
-    
-    .cajas {
-        width: 130px;
-        font-size: 17px;
-    }
+  .infoEstudiosSection,
+  .articleSobreMi {
+    width: 200px;
+    font-size: 17px;
+  }
+
+  /* cajas */
+  .sectionCajas {
+    width: 180px;
+  }
+
+  .cajas {
+    width: 130px;
+    font-size: 17px;
+  }
 }

@@ -43,10 +43,9 @@ function escapeRegex(text) {
 }
 
 function getDefinitionsOne(req, res) {
-    let idDefiniciones = req.params.id;
+    let idDefiniciones = req.params.id
 
     definiciones.findOne({ _id: idDefiniciones }, (err, definicionesOne) => {
-
         res.render('leermas',
             {
                 definicionesOne: definicionesOne,
