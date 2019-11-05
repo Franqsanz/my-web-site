@@ -35,7 +35,10 @@ function getDefinitions(req, res) {
                 });
         }).sort({ _id: -1 });
     }
-    res.cookie('busqueda ', req.query.search, { expires: new Date(Date.now() + 100000) })
+    res.cookie('busqueda ', req.query.search, {
+        expires: new Date(Date.now() + 100000),
+        httpOnly: true
+    })
 }
 // expresion regular para el search
 function escapeRegex(text) {
@@ -91,6 +94,7 @@ function postDefinitionsPrivate(req, res) {
             } else {
                 let newDefinicion = new definiciones({
                     titulo: req.body.titulo,
+                    fragmento_cuerpo: req.body.fragmento,
                     cuerpo: req.body.cuerpo,
                     img: req.file.filename,
                     fuente: req.body.fuente

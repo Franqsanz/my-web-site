@@ -5,6 +5,7 @@ const { Schema } = mongoose;
 
 const articulos = new Schema({
     titulo: { type: String, required: true },
+    fragmento_cuerpo: { type: String, max: 200, required: true },
     cuerpo: { type: String, max: 500, required: true },
     img: String,
     fuente: { type: String, required: true },

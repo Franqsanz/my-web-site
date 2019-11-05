@@ -11,6 +11,8 @@
     <form class="formMail" action="/definiciones-private/newDefiniciones" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id" value="{{estado.id}}">
         <input type="text" name="titulo" placeholder="titulo" class="input">
+        <textarea class="cuerpo-fragmento" name="fragmento" placeholder="Fragmento del Articulo"
+            class="input"></textarea>
         <textarea class="cuerpo" name="cuerpo" placeholder="cuerpo" class="input"></textarea>
         <input type="file" name="img" class="input">
         <input type="text" name="fuente" placeholder="fuente" class="input">

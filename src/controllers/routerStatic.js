@@ -4,20 +4,26 @@ const email = require('../mail/mailCtrl');
 
 function getHome(req, res) {
     res.cookie('inicio', req.ip, {
-        expires: new Date(Date.now() + 100000), 
-        httpOnly: true,
+        expires: new Date(Date.now() + 100000),
+        httpOnly: true
     })
-    res.render('index', {titulo: 'FranqsanzDev'});
+    res.render('index', { titulo: 'FranqsanzDev' });
 }
 
 function getSobreMi(req, res) {
-    res.cookie('sobre-mi', req.ip, {expires: new Date(Date.now() + 100000), httpOnly: true})    
+    res.cookie('sobre-mi', req.ip, {
+        expires: new Date(Date.now() + 100000),
+        httpOnly: true
+    })
     res.render('sobre-mi', { titulo: 'Sobre mi | FranqsanzDev' });
 }
 
 function getContact(req, res) {
-    res.cookie('contacto', req.body, {expires: new Date(Date.now() + 100000), httpOnly: true })
-    res.render('contacto', { titulo : 'Contacto | FranqsanzDev' });
+    res.cookie('contacto', req.body, {
+        expires: new Date(Date.now() + 100000),
+        httpOnly: true
+    })
+    res.render('contacto', { titulo: 'Contacto | FranqsanzDev' });
 }
 
 function postContact(req, res) {

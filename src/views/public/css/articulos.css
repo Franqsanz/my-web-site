@@ -54,12 +54,12 @@ span {
   padding: 20px;
   margin: auto;
   font-size: 20px;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 .articuloOne::first-letter {
-  font-size: 65px;
-  color: rgb(235, 202, 17);
+  font-size: 45px;
+  font-weight: bold;
 }
 
 .foto_article {
