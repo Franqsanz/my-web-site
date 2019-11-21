@@ -270,6 +270,7 @@ li {
   box-shadow: 0 0 4px gray;
 }
 
+textarea,
 .cuerpo,
 .cuerpo-fragmento {
   max-width: 100%;
