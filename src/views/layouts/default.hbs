@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-AR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -11,6 +12,7 @@
     {{!-- <link rel="icon" href="../images/favicon.ico" type="image/ico"> --}}
     <title> {{ titulo }} </title>
 </head>
+
 <body>
     <main>
         <header>
@@ -22,32 +24,32 @@
             </div>
             <div class="logo">
                 <a href="/" class="a_logo">Franqsanz Dev</a>
-            </div>  
+            </div>
             <div class="nav">
                 <ul>
                     <li class="X">X</li>
                     <li class="li_search">
-                        <form action="/definiciones" method="GET">
-                            <input type="text" name="search" class="search" placeholder="Buscar Definiciones..." required>
+                        <form action="/blog" method="GET">
+                            <input type="text" name="search" class="search" placeholder="Buscar Articulos..." required>
                         </form>
                     </li>
                     <li><a href="/" class="nav_enlaces">Inicio</a></li>
-                    <li><a href="/definiciones" class="nav_enlaces">Definiciones</a></li>
+                    <li><a href="/blog" class="nav_enlaces">Blog</a></li>
                     <li><a href="/contacto" class="nav_enlaces">Contacto</a></li>
                 </ul>
             </div>
         </header>
         <div class="cerrarNav">
-            {{{ body }}}  
+            {{{ body }}}
         </div>
         <footer>
             <p class="redes">
                 {{!-- <i class="fa fa-facebook" title="facebook"></i> --}}
-				<a href="https://instagram.com/franqsanz" class="a_redes" target="_blank">
+                <a href="https://instagram.com/franqsanz" class="a_redes" target="_blank">
                     <i class="fa fa-instagram" title="Instagram"></i>
                 </a>
                 <a href="https://twitter.com/franqsanz" class="a_redes" target="_blank">
-                    <i class="fa fa-twitter" title="Twitter"></i> 
+                    <i class="fa fa-twitter" title="Twitter"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/franqsanzdev" class="a_redes" target="_blank">
                     <i class="fa fa-linkedin" title="Linkedin"></i>
@@ -63,4 +65,5 @@
     </main>
     <script src="../js/events.js"></script>
 </body>
+
 </html>
