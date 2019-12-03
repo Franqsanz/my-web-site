@@ -1,8 +1,12 @@
 {
   "name": "Franqsanz_Dev",
   "version": "0.0.1",
-  "description": "Desarrollando mi primer WebApp con Node.js y MongoDB",
+  "description": "Desarrollando Web de porfolio con Node.js y MongoDB",
   "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "browser-sync start --proxy http://localhost:8300 --files './*'"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
@@ -17,10 +21,8 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "nodemon": "^1.18.10"
-  },
-  "scripts": {
-    "dev": "nodemon src/server.js"
   },
   "author": "Franco Andrés Sánchez",
   "license": "MIT"

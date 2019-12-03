@@ -51,7 +51,7 @@ span {
 
 .articuloOne {
   width: 80%;
-  padding: 20px;
+  padding: 17px;
   margin: auto;
   font-size: 20px;
   line-height: 1.6em;
@@ -123,6 +123,10 @@ span {
 
   .img_article {
     width: 100%;
+  }
+
+  .articuloOne {
+    width: 87%;
   }
 }
 
