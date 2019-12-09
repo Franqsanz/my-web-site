@@ -14,9 +14,11 @@
 <section class="seccionArticle">
     <h1 class="tituloArticle">{{this.titulo}}</h1>
     <div class="foto_article">
-        <img src="../upload/{{this.img}}" class="img_article">
+        <a href="/blog/{{this._id}}" class="a_mas">
+            <img src="../upload/{{this.img}}" class="img_article">
+        </a>
     </div>
-    <article class="articuloCuerpo">{{this.fragmento_cuerpo}} [...]</article>
+    {{!-- <article class="articuloCuerpo">{{this.fragmento_cuerpo}} [...]</article> --}}
     <div class="btnOperacion">
         <a href="/blog/{{this._id}}" class="a_mas">Leer Mas</a>
     </div>

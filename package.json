@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "start": "browser-sync start --proxy http://localhost:8300 --files './*'"
+    "start": "browser-sync start --proxy http://localhost:8300 --files '*.hbs, *.css, *.js'"
   },
   "dependencies": {
     "body-parser": "^1.18.3",

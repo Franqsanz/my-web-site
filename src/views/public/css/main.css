@@ -174,7 +174,7 @@ li {
 
 .titulos {
   width: 100%;
-  max-width: 155px;
+  max-width: 200px;
   margin: 20px auto;
   background: rgb(252, 214, 2);
   text-align: center;
@@ -438,7 +438,7 @@ footer {
   }
 
   .titulos {
-    max-width: 170px;
+    max-width: 165px;
     font-size: 40px;
   }
 
@@ -496,7 +496,7 @@ footer {
   }
 
   .titulos {
-    max-width: 170px;
+    max-width: 160px;
     font-size: 30px;
   }
 
