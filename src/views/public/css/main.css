@@ -101,12 +101,12 @@ header {
   display: none;
 }
 
-ul {
+.ulMenu {
   text-align: right;
   font-size: 22px;
 }
 
-li {
+.liMenu {
   display: inline-block;
   list-style: none;
 }
@@ -231,6 +231,11 @@ li {
   text-align: center;
   font-size: 22px;
   padding: 10px;
+}
+
+.liSobreMi {
+  list-style: none;
+  margin: 5px;
 }
 
 .tituloEstudios {
@@ -391,7 +396,7 @@ footer {
     transition: 0.4s cubic-bezier(0.4, 0, 0, 1);
   }
 
-  ul {
+  .ulMenu {
     width: 80%;
     text-align: left;
     font-size: 23px;
@@ -400,7 +405,7 @@ footer {
     padding: 10px;
   }
 
-  li {
+  .liMenu {
     display: block;
   }
 
@@ -468,13 +473,13 @@ footer {
 
   .infoEstudiosSection,
   .articleSobreMi {
-    width: 370px;
+    width: 90%;
   }
 
   /* cajas */
   .sectionCajas {
-    width: 300px;
-    flex-direction: column;
+    width: 600px;
+    flex-direction: row;
   }
 
   .cajas {
@@ -482,7 +487,7 @@ footer {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
   .logo {
     font-size: 25px;
   }
@@ -547,6 +552,7 @@ footer {
   /* cajas */
   .sectionCajas {
     width: 300px;
+    flex-direction: column;
   }
 
   .cajas {

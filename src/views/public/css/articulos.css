@@ -121,6 +121,10 @@ span {
     height: 100%;
   }
 
+  .tituloArticle {
+    font-size: 28px;
+  }
+
   .img_article {
     width: 100%;
   }
@@ -140,7 +144,7 @@ span {
   }
 
   .tituloArticle {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .fuenteArticle {
