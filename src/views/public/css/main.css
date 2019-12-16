@@ -206,7 +206,7 @@ header {
 }
 
 .tituloSobreMi {
-  font-size: 37px;
+  font-size: 35px;
   font-style: normal;
   color: #ffc600;
 }
@@ -222,20 +222,21 @@ header {
   display: flex;
   width: 700px;
   margin: auto;
-  padding: 10px;
+  align-items: center;
+  align-items: stretch;
 }
 
 .cajas {
   width: 500px;
   margin: 10px;
   text-align: center;
-  font-size: 22px;
+  font-size: 19px;
   padding: 10px;
 }
 
 .liSobreMi {
   list-style: none;
-  margin: 5px;
+  margin: 10px;
 }
 
 .tituloEstudios {
@@ -471,6 +472,11 @@ footer {
     width: 300px;
   }
 
+  .tituloSobreMi,
+  .tituloEstudios {
+    font-size: 25px;
+  }
+
   .infoEstudiosSection,
   .articleSobreMi {
     width: 90%;
@@ -536,11 +542,6 @@ footer {
   /* sobre mi */
   .imgSobreMi {
     width: 220px;
-  }
-
-  .tituloSobreMi,
-  .tituloEstudios {
-    font-size: 25px;
   }
 
   .infoEstudiosSection,
