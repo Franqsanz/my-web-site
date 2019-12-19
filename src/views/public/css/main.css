@@ -434,8 +434,8 @@ footer {
   }
 
   .foto {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     background-position: -1px -15px;
   }
 
@@ -496,6 +496,12 @@ footer {
 @media (max-width: 425px) {
   .logo {
     font-size: 25px;
+  }
+
+  .foto {
+    width: 160px;
+    height: 160px;
+    background-position: -5px -17px;
   }
 
   .hamburgesa {
