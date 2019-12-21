@@ -11,3 +11,4 @@ const options = {
 mongoose.connect(config.db, options)
     .then(() => console.log('Data Base Conect'))
     .catch((err) => console.log(`Data Base Error Conect: ${err}`))
+// mongoose.connection.close();

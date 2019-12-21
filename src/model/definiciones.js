@@ -5,10 +5,10 @@ const { Schema } = mongoose;
 
 const articulos = new Schema({
     titulo: { type: String, required: true },
-    fragmento_cuerpo: { type: String, max: 200, required: true },
+    fragmento_cuerpo: { type: String, max: 200 },
     cuerpo: { type: String, max: 500, required: true },
     img: String,
-    fuente: { type: String, required: true },
+    fuente: { type: String },
     fecha: { type: Date, default: Date.now }
 }, { versionKey: false });
 

@@ -4,7 +4,9 @@
 </div>
 <article class="articuloOne">
     {{definicionesOne.cuerpo}}
-    <h5 class="fuenteArticleOne">Fuente:
+    {{#if definicionesOne.fuente}}
+    <h5 class="fuenteArticleOne">
         <a href="{{definicionesOne.fuente}}" class="a_fuente" target="_blak">{{definicionesOne.fuente}}</a>
     </h5>
+    {{/if}}
 </article>
