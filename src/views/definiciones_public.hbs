@@ -12,11 +12,11 @@
 
 {{#each definiciones}}
 <section class="seccionArticle">
-    <h1 class="tituloArticle">{{this.titulo}}</h1>
-    <div class="foto_article">
-        <a href="/blog/{{this._id}}" class="a_mas_img">
+    <a href="/blog/{{this._id}}" class="a_mas_seccion">
+        <h1 class="tituloArticle">{{this.titulo}}</h1>
+        <div class="foto_article">
             <img src="../upload/{{this.img}}" class="img_article">
-        </a>
-    </div>
+        </div>
+    </a>
 </section>
 {{/each}}

@@ -18,7 +18,7 @@ function getDefinitions(req, res) {
             }
             res.render('definiciones_Public',
                 {
-                    titulo: 'Definiciones | FranqsanzDev',
+                    titulo: 'Blog | FranqsanzDev',
                     definiciones: definiciones,
                     mensajeError: mensajeError,
                     mensajeOk: mensajeOk,
@@ -30,7 +30,7 @@ function getDefinitions(req, res) {
             //console.log(definiciones);
             res.render('definiciones_Public',
                 {
-                    titulo: 'Definiciones | FranqsanzDev',
+                    titulo: 'Blog | FranqsanzDev',
                     definiciones: definiciones
                 });
         }).sort({ _id: -1 });
