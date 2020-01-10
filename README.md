@@ -1,4 +1,4 @@
-## Franqsanz Dev 2019 (Franco Andrés Sánchez)
+## Franqsanz Dev 2020 (Franco Andrés Sánchez)
 
 ![](src/views/public/images/franqsanz-dev-logo.png)
 Un sitio personal que utilizare como **portafolio de CV**, y tambien para que me contacten.
@@ -18,7 +18,7 @@ Un sitio personal que utilizare como **portafolio de CV**, y tambien para que me
 - nodemon
 - browser-sync
 
-> En este proyecto e utlizado variables de entorno propias, si llegas a descargar este proyecto debe colocar tus propias variables de entorno.
+> En este proyecto eh utlizado variables de entorno propias, si llegas a descargar este proyecto debe colocar tus propias variables de entorno.
 
 ---
 
@@ -26,6 +26,6 @@ _Version de la Web: 0.0.1_
 
 ---
 
-[Visita mi perfil de Instagram](https://instagram.com/franqsanz)
+[Visita mi perfil de Twitter](https://twitter.com/franqsanz)
 [Visita mi perfil de GitHub](https://www.github.com/franqsanz)
-[Visita el Sitio Web](https://www.franqsanzdev.com/)
+<!-- [Visita el Sitio Web](https://www.franqsanzdev.com/) -->
