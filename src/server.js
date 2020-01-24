@@ -1,5 +1,6 @@
 'use strict';
 
+// Dependencias de NPM
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -10,6 +11,7 @@ const helmet = require('helmet');
 const hbs = require('express-handlebars');
 require('dotenv').config();
 
+// Ficheros Locales
 const index = require('./routes/index');
 const definitionsPrivate = require('./routes/definitions-private');
 const viewsStaticCtrl = require('./controllers/routerStatic');
@@ -20,7 +22,7 @@ const app = express();
 const HOST = process.env.HOST_LOCAL;
 require('./config/conexionDB');
 
-// setting
+// Setting
 app.engine(
     '.hbs',
     hbs({
@@ -31,7 +33,7 @@ app.engine(
 app.set('views', path.join(__dirname, '/views/'));
 app.set('view engine', '.hbs');
 
-// middlewares
+// Middlewares
 app.use(
     helmet({
         contentSecurityPolicy: false,
@@ -48,7 +50,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(favicon(path.join(__dirname, '/views/public/images/favicon.ico')));
 app.use(cookie()); // usar cookies
 
-// routes
+// Routes
 app.use('/', index);
 app.use('/definiciones-private', definitionsPrivate);
 

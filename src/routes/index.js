@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', viewsStaticCtrl.getHome);
 // sobre mi
 router.get('/sobre-mi', viewsStaticCtrl.getSobreMi);
-//definiciones todo
+// definiciones todo
 router.get('/blog', definitionsCtrl.getDefinitions);
 router.get('/blog/:id', definitionsCtrl.getDefinitionsOne);
 // contacto
