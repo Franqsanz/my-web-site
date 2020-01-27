@@ -4,7 +4,7 @@ const express = require('express');
 const viewsStaticCtrl = require('../controllers/routerStatic');
 const definitionsCtrl = require('../controllers/definitions');
 const router = express.Router();
-const serverless = require('serverless-http');
+// const serverless = require('serverless-http');
 
 router.get('/', viewsStaticCtrl.getHome);
 // sobre mi
@@ -17,4 +17,4 @@ router.get('/contacto', viewsStaticCtrl.getContact);
 router.post('/contacto', viewsStaticCtrl.postContact);
 
 module.exports = router
-module.exports.handler = serverless(app);
+// module.exports.handler = serverless(app);
