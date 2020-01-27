@@ -5,7 +5,7 @@ const config = require('../config/config');
 
 // conexion a la DB
 const options = {
-    useNewUrlParser: true, useUnifiedTopology: true
+    useNewUrlParser: true, useUnifiedTopology: true, useMongoClient: true
 }
 
 mongoose.connect(config.db, options)
