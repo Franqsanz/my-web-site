@@ -51,6 +51,7 @@ app.use(favicon(path.join(__dirname, '/views/public/images/favicon.ico')));
 app.use(cookie()); // usar cookies
 
 // Routes
+app.use('/.netlify/functions/server', index);
 app.use('/', index);
 app.use('/definiciones-private', definitionsPrivate);
 
@@ -62,3 +63,5 @@ app.all('*', viewsStaticCtrl.getAll);
 app.listen(config.Port, () =>
     console.log(`server on port: ${HOST + config.Port}`)
 );
+
+module.exports.handler = serverless(app);
