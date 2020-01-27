@@ -52,7 +52,7 @@ app.use(favicon(path.join(__dirname, '/views/public/images/favicon.ico')));
 app.use(cookie()); // usar cookies
 
 // Routes
-app.use('/.netlify/src/server', index);
+app.use('/.netlify/functions/server', index);
 app.use('/', index);
 app.use('/definiciones-private', definitionsPrivate);
 
