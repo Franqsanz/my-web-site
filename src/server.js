@@ -9,6 +9,7 @@ const cookie = require('cookie-parser');
 const favicon = require('serve-favicon');
 const helmet = require('helmet');
 const hbs = require('express-handlebars');
+const serverless = require('serverless-http');
 require('dotenv').config();
 
 // Ficheros Locales
