@@ -9,7 +9,6 @@ const cookie = require('cookie-parser');
 const favicon = require('serve-favicon');
 const helmet = require('helmet');
 const hbs = require('express-handlebars');
-const serverless = require('serverless-http');
 require('dotenv').config();
 
 // Ficheros Locales
@@ -64,5 +63,3 @@ app.all('*', viewsStaticCtrl.getAll);
 app.listen(config.Port, () =>
     console.log(`server on port: ${HOST + config.Port}`)
 );
-
-module.exports.handler = serverless(app);
