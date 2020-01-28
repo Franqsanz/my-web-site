@@ -4,7 +4,8 @@
 }
 
 body {
-  font-family: 'bodoni bk bt';
+  /* font-family: 'bodoni bk bt'; */
+  font-family: 'Gentium Book Basic', serif;
   font-style: italic;
   --color-yellow: rgb(252, 214, 2);
   color: #3b3b3b;

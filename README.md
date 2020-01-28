@@ -26,6 +26,6 @@ _Version de la Web: 0.0.1_
 
 ---
 
-[Visita mi perfil de Twitter](https://twitter.com/franqsanz)
-[Visita mi perfil de GitHub](https://www.github.com/franqsanz)
-<!-- [Visita el Sitio Web](https://www.franqsanzdev.com/) -->
+- [Visita mi perfil de Twitter](https://twitter.com/franqsanz)
+- [Visita mi perfil de GitHub](https://www.github.com/franqsanz)
+- [Visita el Sitio Web](https://franqsanzdev.herokuapp.com/)
