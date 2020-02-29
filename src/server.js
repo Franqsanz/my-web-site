@@ -52,13 +52,11 @@ app.use(cookie()); // usar cookies
 
 // Routes
 app.use('/', index);
-app.use('/definiciones-private', definitionsPrivate);
+// app.use('/definiciones-private', definitionsPrivate);
 
 // 404
 app.get('/404', viewsStaticCtrl.get404);
 app.all('*', viewsStaticCtrl.getAll);
 
 // le pasamos el puerto de escucha al servidor
-app.listen(config.Port, () =>
-    console.log(`server on port: ${HOST + config.Port}`)
-);
+app.listen(config.Port, () => console.log(`server on port: ${HOST + config.Port}`));

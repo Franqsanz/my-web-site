@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Apasionado por el Desarrollo y el Diseño. Desarrollador Web Full Stack">
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/icon.png">
+    <meta name="theme-color" content="#ffc600">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/articulos.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap&text=About" rel="stylesheet">
     {{!-- <link rel="icon" href="../images/favicon.ico" type="image/ico"> --}}
     <title> {{ titulo }} </title>
 </head>
@@ -43,6 +45,9 @@
                     <li class="liMenu">
                         <a href="/contacto" class="nav_enlaces">Contacto</a>
                     </li>
+                    <li class="liMenu">
+                        <div class="iconMode">🌙</div>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -50,8 +55,7 @@
             {{{ body }}}
         </div>
         <footer>
-            <p class="redes">
-                {{!-- <i class="fa fa-facebook" title="facebook"></i> --}}
+            <div class="redes">
                 <a href="https://instagram.com/franqsanz" class="a_redes" target="_blank">
                     <i class="fa fa-instagram" title="Instagram"></i>
                 </a>
@@ -64,13 +68,13 @@
                 <a href="https://github.com/Franqsanz" class="a_redes" target="_blank">
                     <i class="fa fa-github" title="GitHub"></i>
                 </a>
-            </p>
+            </div>
             <p class="infoLicense">
                 {{!-- Copyright ©  --}} 2020 Franco Andrés Sánchez
             </p>
         </footer>
     </main>
-    <script src="../js/events.js"></script>
+    <script defer src="../js/events.js"></script>
 </body>
 
 </html>
