@@ -7,7 +7,7 @@ function getHome(req, res) {
         expires: new Date(Date.now() + 100000),
         httpOnly: true
     })
-    res.render('index', { titulo: 'FranqsanzDev' });
+    res.render('index', { titulo: 'Franqsanz Dev' });
 }
 
 function getSobreMi(req, res) {
@@ -15,7 +15,7 @@ function getSobreMi(req, res) {
         expires: new Date(Date.now() + 100000),
         httpOnly: true
     })
-    res.render('sobre-mi', { titulo: 'Sobre mi | FranqsanzDev' });
+    res.render('sobre-mi', { titulo: 'Sobre mi | Franqsanz Dev' });
 }
 
 function getContact(req, res) {
@@ -23,7 +23,7 @@ function getContact(req, res) {
         expires: new Date(Date.now() + 100000),
         httpOnly: true
     })
-    res.render('contacto', { titulo: 'Contacto | FranqsanzDev' });
+    res.render('contacto', { titulo: 'Contacto | Franqsanz Dev' });
 }
 
 function postContact(req, res) {

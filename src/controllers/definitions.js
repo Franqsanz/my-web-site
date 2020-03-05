@@ -18,7 +18,7 @@ function getDefinitions(req, res) {
             }
             res.render('definiciones_Public',
                 {
-                    titulo: 'Blog | FranqsanzDev',
+                    titulo: 'Blog | Franqsanz Dev',
                     definiciones: definiciones,
                     mensajeError: mensajeError,
                     mensajeOk: mensajeOk,
@@ -30,7 +30,7 @@ function getDefinitions(req, res) {
             //console.log(definiciones);
             res.render('definiciones_Public',
                 {
-                    titulo: 'Blog | FranqsanzDev',
+                    titulo: 'Blog | Franqsanz Dev',
                     definiciones: definiciones
                 });
         }).sort({ _id: -1 });
@@ -52,7 +52,7 @@ function getDefinitionsOne(req, res) {
         res.render('leermas',
             {
                 definicionesOne: definicionesOne,
-                titulo: `${definicionesOne.titulo} | FranqsanzDev`
+                titulo: `${definicionesOne.titulo} | Franqsanz Dev`
             });
     })
 }
@@ -64,20 +64,20 @@ function getEditDefinitions(req, res) {
         // console.log(estado);
         res.render('editDefiniciones',
             {
-                titulo: 'Editar Definiciones | FranqsanzDev',
+                titulo: 'Editar Definiciones | Franqsanz Dev',
                 definiciones: definiciones
             });
     })
 }
 
 function getNewDefinitions(req, res) {
-    res.render('newDefiniciones', { titulo: 'Nuevo Defeniciones | FranqsanzDev' });
+    res.render('newDefiniciones', { titulo: 'Nuevo Defeniciones | Franqsanz Dev' });
 }
 
 function getDefinitionsPrivate(req, res) {
     definiciones.find((err, definiciones) => {
         // console.log(estado);
-        res.render('definiciones', { titulo: 'Definiciones Private | FranqsanzDev', definiciones: definiciones });
+        res.render('definiciones', { titulo: 'Definiciones Private | Franqsanz Dev', definiciones: definiciones });
     }).sort({ _id: -1 });
 }
 
