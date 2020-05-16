@@ -1,20 +1,14 @@
 'use strict';
 
-const express = require('express');
-const viewsStaticCtrl = require('../controllers/routerStatic');
-const definitionsCtrl = require('../controllers/definitions');
-const router = express.Router();
-// const serverless = require('serverless-http');
+const router = require('express').Router();
+const {
+    getHome,
+    getSobreMi,
+    getContact
+} = require('../controllers/routerStatic');
 
-router.get('/', viewsStaticCtrl.getHome);
-// sobre mi
-router.get('/sobre-mi', viewsStaticCtrl.getSobreMi);
-// definiciones todo
-router.get('/blog', definitionsCtrl.getDefinitions);
-router.get('/blog/:id', definitionsCtrl.getDefinitionsOne);
-// contacto
-router.get('/contacto', viewsStaticCtrl.getContact);
-router.post('/contacto', viewsStaticCtrl.postContact);
+router.get('/', getHome);
+router.get('/sobre-mi', getSobreMi);
+router.get('/contacto', getContact);
 
 module.exports = router
-// module.exports.handler = serverless(app);

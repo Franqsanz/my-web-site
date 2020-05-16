@@ -1,5 +1,5 @@
 {
-  "name": "Franqsanz_Dev",
+  "name": "Franqsanz",
   "version": "0.0.1",
   "description": "Desarrollo Web de porfolio con Node.js y MongoDB",
   "main": "server.js",
@@ -14,11 +14,7 @@
     "express": "^4.16.4",
     "express-handlebars": "^3.1.0",
     "helmet": "^3.21.2",
-    "mongoose": "^5.7.12",
-    "morgan": "^1.9.1",
-    "multer": "^1.4.2",
-    "nodemailer": "^6.1.1",
-    "serve-favicon": "^2.5.0"
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
