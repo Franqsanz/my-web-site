@@ -45,6 +45,10 @@ main > * {
   background: whitesmoke;
 }
 
+.notFound.dark {
+  background: var(--dark-mode);
+}
+
 .msjInfo,
 .msjInfo2 {
   max-width: 800px;
@@ -227,6 +231,13 @@ header.dark {
 }
 
 /* sobre mi */
+.titulo {
+  margin: 100px 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 50px;
+}
+
 .imgSobreMi {
   width: 400px;
   margin: 35px auto;
@@ -577,6 +588,10 @@ footer.dark {
 
   .saludo {
     font-size: 35px;
+  }
+
+  .titulo {
+    font-size: 30px;
   }
 
   .titulos {

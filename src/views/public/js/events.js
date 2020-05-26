@@ -7,6 +7,7 @@ let header = document.querySelector('header'),
     X = document.querySelector('.X'),
 
     iconMode = document.querySelector('.iconMode'),
+    notFound = document.querySelector('.notFound'),
     logo = document.querySelector('.a_logo'),
     aSobreMi = document.querySelectorAll('.sobreMi'),
     aEnlacesNav = document.querySelectorAll('.nav_enlaces'),
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             aSobreMi.forEach(aSobreMi => {
                 aSobreMi.classList.toggle('dark');
             });
+            notFound.classList.toggle('dark');
             footer.classList.toggle('dark');
             iconMode.textContent = '💡';
 
@@ -72,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         aSobreMi.forEach(aSobreMi => {
             aSobreMi.classList.toggle('dark');
         });
+        notFound.classList.toggle('dark');
         footer.classList.toggle('dark');
         iconMode.textContent = '💡';
     }
