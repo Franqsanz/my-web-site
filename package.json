@@ -1,5 +1,5 @@
 {
-  "name": "Franqsanz",
+  "name": "franqsanz",
   "version": "0.0.1",
   "description": "Desarrollo Web de porfolio con Node.js y MongoDB",
   "main": "server.js",
@@ -8,17 +8,17 @@
     "start": "browser-sync start --proxy http://localhost:8300 --files '*.hbs, *.css, *.js'"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "cookie-parser": "^1.4.4",
-    "dotenv": "^8.1.0",
-    "express": "^4.16.4",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "helmet": "^3.21.2",
-    "morgan": "^1.9.1"
+    "helmet": "^3.22.0",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.19.4"
   },
   "author": "Franco Andrés Sánchez",
   "license": "MIT"
